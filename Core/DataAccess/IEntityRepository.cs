@@ -8,6 +8,7 @@ namespace Core.Abstract
 {
     public interface IEntityRepository<T> where T : class, IEntity, new()
     {
+        //linq şartı gönderilen sabitler. Listeleme işlemini standardize etmek için altyapıya ekleniyor(productGet(p=>p.id==id) gibi)
         List<T> GetAll(Expression<Func<T, bool>> filter = null);
         T Get(Expression<Func<T, bool>> filter);
         void Add(T entity);

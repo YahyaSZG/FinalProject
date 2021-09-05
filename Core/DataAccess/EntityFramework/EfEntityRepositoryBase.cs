@@ -9,6 +9,7 @@ using System.Text;
 
 namespace Core.DataAccess.EntityFramework
 {
+    //TEntity: tablo nesnesi, TContext : db nesnesi
     public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
