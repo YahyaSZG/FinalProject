@@ -77,9 +77,9 @@ namespace WebAPI
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseAuthentication();//yetki kontrolleri için önemli
 
-            app.UseAuthorization();
+            app.UseAuthorization();//yetki kontrolleri için önemli
 
             app.UseEndpoints(endpoints =>
             {
